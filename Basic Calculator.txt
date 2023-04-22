@@ -1,0 +1,13 @@
+The program then displays the result of the calculation and prompts the user to choose another operation or quit.
+
+The program starts by printing a welcome message to the console and displaying the available operations.
+
+The program then enters a while loop that continues indefinitely, prompting the user to enter a choice of operation. If the user enters "q", the program prints a goodbye message and exits the loop.
+
+If the user chooses a valid operation, the program prompts the user to enter two numbers to perform the operation on. If the user chooses division and enters a second number of 0, the program prints an error message and continues the loop.
+
+Once the user has entered two valid numbers, the program performs the selected operation and prints the result to the console.
+
+The program then consumes any remaining input characters (such as a newline character) and continues the loop, allowing the user to perform another calculation or quit the program.
+
+Finally, the program closes the Scanner object to release system resources.
