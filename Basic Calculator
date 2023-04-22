@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Welcome to the calculator!");
+        System.out.println("--------------------------");
+        
+        while (true) {
+            System.out.println("Please choose an operation:");
+            System.out.println("+ - Add");
+            System.out.println("- - Subtract");
+            System.out.println("* - Multiply");
+            System.out.println("/ - Divide");
+            System.out.println("q - Quit");
+            
+            String choice = scanner.nextLine();
+            
+            if (choice.equals("q")) {
+                System.out.println("Goodbye!");
+                break;
+            }
+            
+            System.out.print("Enter the first number: ");
+            double num1 = scanner.nextDouble();
+            
+            System.out.print("Enter the second number: ");
+            double num2 = scanner.nextDouble();
+            
+            double result = 0.0;
+            
+            if (choice.equals("+")) {
+                result = num1 + num2;
+            } else if (choice.equals("-")) {
+                result = num1 - num2;
+            } else if (choice.equals("*")) {
+                result = num1 * num2;
+            } else if (choice.equals("/")) {
+                if (num2 == 0) {
+                    System.out.println("Error: division by zero");
+                    continue;
+                } else {
+                    result = num1 / num2;
+                }
+            } else {
+                System.out.println("Invalid choice, try again");
+                continue;
+            }
+            
+            System.out.println("Result: " + result);
+            
+            scanner.nextLine(); // consume newline character
+        }
+        
+        scanner.close();
+    }
+}
